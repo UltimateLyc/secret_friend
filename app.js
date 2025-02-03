@@ -6,11 +6,17 @@ function addFriend() {
     document.getElementById('amigo').value.trim() === "" // trim( ) devuelve la cadena de texto despojada de los espacios en blanco en ambos extremos.
         ? alert("Favor de ingresar un nombre valido") 
         : arrayFriend.push(document.getElementById('amigo').value)
-    console.log(arrayFriend.length)
-    console.log(arrayFriend)
+    //console.log(arrayFriend.length)
+    //console.log(arrayFriend)
+    createListFriends()
     clearInput()
 }
 
 function clearInput() {
     document.getElementById('amigo').value = ''
+}
+
+function createListFriends () {
+    document.getElementById("listaAmigos").innerHTML = arrayFriend.map(friend => `<li>${friend}</li>`).join('')
+
 }
