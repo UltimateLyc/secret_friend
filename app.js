@@ -9,7 +9,6 @@ function addFriend() {
     //console.log("🚀 ~ arrayFriend:", arrayFriend.length)
     //console.log(arrayFriend)
     createListFriends()
-    getSecretFriend()
     clearInput()
 }
 
@@ -27,9 +26,6 @@ function createListFriends () {
 }
 
 function getSecretFriend () {
-    let size = arrayFriend.length,
-    randomNumber = Math.floor(Math.random()*size)
-    console.log("🚀 ~ size:", size)
-    console.log("🚀 ~ randomNumber:", randomNumber)
-    
+    let size = arrayFriend.length
+    return Math.floor(Math.random()*size)  
 }
