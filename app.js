@@ -16,7 +16,7 @@ function clearInput() {
     document.getElementById('amigo').value = ''
 }
 
-function createListFriends () {
+function createListFriends() {
     document.getElementById("listaAmigos").innerHTML = arrayFriend.map(friend => `<li>${friend}</li>`).join('')
     /**
      * map() transforma cada elemento en una cadena <li>Elemento</li>.
@@ -25,7 +25,14 @@ function createListFriends () {
      */
 }
 
-function getSecretFriend () {
+function getSecretFriend() {
     let size = arrayFriend.length
     return Math.floor(Math.random()*size)  
+}
+
+function raffleFriend() {
+    console.log('tets')
+    arrayFriend.length === 0 
+        ? alert('Favor de ingresar amigos')
+        : document.getElementById('resultado').innerHTML = `<li>${arrayFriend[getSecretFriend()]}</li>`
 }
